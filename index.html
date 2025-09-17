@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;}
+    body{background:#f8f9fa;color:#333;line-height:1.6;}
+    header{background:#2f1a14;color:#fff;padding:60px 20px;text-align:center;}
+    header h1{font-size:40px;font-weight:700;}
+    header p{font-size:18px;margin-top:10px;}
+    nav{background:#444;color:#fff;display:flex;justify-content:center;gap:20px;padding:15px;}
+    nav a{color:#fff;text-decoration:none;font-weight:500;}
+    nav a:hover{color:#ffd1c1;}
+    section{padding:60px 20px;max-width:1000px;margin:auto;}
+    section h2{text-align:center;margin-bottom:30px;font-size:28px;color:#2f1a14;}
+    .about,.skills,.projects,.contact{margin-bottom:50px;}
+    .about p{text-align:center;font-size:18px;max-width:700px;margin:auto;}
+    .skills ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;list-style:none;}
+    .skills li{background:#ffe5dc;padding:15px;border-radius:10px;text-align:center;font-weight:600;}
+    .projects .card{background:#fff;border-radius:10px;box-shadow:0 4px 8px rgba(0,0,0,0.1);padding:20px;text-align:center;}
+    .projects .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;}
+    .projects img{width:100%;border-radius:10px;}
+    .contact form{display:flex;flex-direction:column;gap:15px;max-width:500px;margin:auto;}
+    .contact input,.contact textarea{padding:12px;border:1px solid #ccc;border-radius:8px;font-size:16px;}
+    .contact button{padding:12px;background:#2f1a14;color:#fff;border:none;border-radius:8px;font-size:16px;cursor:pointer;}
+    .contact button:hover{background:#4a2a22;}
+    footer{text-align:center;background:#222;color:#fff;padding:20px;}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Hi, I'm Pazhanivel R</h1>
+    <p>Front-End Developer | Designer | Freelancer</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+      I am R.Pazhanivel, I have studieng in 2nd year (B.sc.computer science)arignar anna arts college in villupuram. 
+      I am a passionate web developer with experience in HTML, CSS, and JavaScript. 
+      I enjoy building creative and user-friendly websites that bring ideas to life.
+    </p>
+    
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <h2>My Skills</h2>
+    <ul>
+      <li>HTML & CSS</li>
+      <li>JavaScript</li>
+      <li>UI/UX Design</li>
+      <li>Responsive Web Design</li>
+      <li>Branding</li>
+    </ul>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/400x250" alt="Project 1">
+        <h3>Portfolio Website</h3>
+        <p>A modern personal portfolio website built with HTML, CSS, and JavaScript.</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/400x250" alt="Project 2">
+        <h3>Landing Page</h3>
+        <p>A responsive landing page designed for a startup company.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form onsubmit="sendMessage(event)">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Your Name | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function sendMessage(event){
+      event.preventDefault();
+      let name = document.getElementById('name').value;
+      let email = document.getElementById('email').value;
+      let message = document.getElementById('message').value;
+      alert("Thank you " + name + "! Your message has been sent.");
+      document.querySelector("form").reset();
+    }
+  </script>
+</body>
+</html>
